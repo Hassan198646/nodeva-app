@@ -76,7 +76,7 @@ const SolutionsSection = () => {
               <h2 className="text-lg text-start font-bold text-[#bb5eff]">
                 {solution.title}
               </h2>
-              <p className="text-gray-light text-sm mt-1">
+              <p className="text-gray-light text-start text-sm mt-1">
                 {solution.description}
               </p>
             </div>

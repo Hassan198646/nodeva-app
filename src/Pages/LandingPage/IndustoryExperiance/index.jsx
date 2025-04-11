@@ -16,7 +16,7 @@ export default function PremiumBusinessGrid() {
       >
         Our Industry Experience
       </h1>
-      <div className="flex flex-col md:grid-cols-2 gap-12 md:gap-10">
+      <div className="flex  flex-col md:grid-cols-2 gap-12 md:gap-10">
         <GlobbalReach />
         <Innovation />
       </div>

@@ -34,7 +34,7 @@ const Hero = () => {
         <div>
           <img src={star} />
         </div>
-        <div className="swapping-text w-[80%] sm:w-[60%] ">
+        <div className="swapping-text w-[90%] sm:w-[80%] ">
           <h2
             key={index}
             className="text text-[clamp(30px,4vw,40px)] sm:text-[clamp(50px,6vw,100px)]"
