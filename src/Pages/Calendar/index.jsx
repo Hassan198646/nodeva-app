@@ -38,8 +38,7 @@ const CalendlyScheduler = () => {
     </div>
   </div>
 
-  {/* Newsletter Section */}
-  <div className="flex flex-wrap lg:flex-nowrap gap-10 justify-between rounded-[200px] mt-20 opacity-80">
+  <div className="flex mb-[50px] flex-wrap lg:flex-nowrap gap-10 justify-between rounded-[200px] mt-20 opacity-80">
     <div className="w-full lg:w-[50%]">
       <h2 className="font-['Plus_Jakarta_Sans'] text-start text-[30px] font-bold text-[#e0c3fc] tracking-[0.02em]">
         Subscribe to our Newsletter

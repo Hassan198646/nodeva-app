@@ -6,9 +6,8 @@ import Footerimg from "../../assets/tickerr/FooterInput.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full mx-auto max-w-[80rem] bg-black text-white font-['Plus_Jakarta_Sans'] py-10 px-5 md:px-20">
+    <footer className="w-full mx-auto max-w-[80rem] bg-black text-white font-['Plus_Jakarta_Sans'] py-10 px-5">
       <div className="flex flex-col md:flex-row md:justify-between gap-10">
-        {/* Logo and Newsletter */}
         <div className="flex-1 w-full sm:max-w-[400px]">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#3D05DD] to-[#EFA4F2] bg-clip-text text-transparent">
             Nodeva
