@@ -23,7 +23,7 @@ export default {
     },
     extend: {
       animation: {
-        'spin-slow': 'spin 0s linear infinite',
+        'spin-slow': 'spin 8s linear infinite',
       },
       backgroundImage: {
         "gradient-bg": "linear-gradient(toright, #412767, #130D1F, #191327)",

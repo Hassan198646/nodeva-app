@@ -5,7 +5,7 @@ import appointmentCard from "../assets/card.svg";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 
-const Contact = () => {
+const Contact = () => {   
   const navigate = useNavigate();
 
   return (

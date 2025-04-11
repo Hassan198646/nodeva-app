@@ -3,7 +3,7 @@ import Frametwo from '../../../assets/Frametwo.svg'
 import Framethree from '../../../assets/Framethree.svg'
 import Framefour from '../../../assets/Framefour.svg'
 import Framefive from '../../../assets/Framefive.svg'
-import star from "../../../assets/tickerr/star.png";
+import star from "../../../assets/tickerr/Starone.png";
 import { motion } from "framer-motion";
 
 // Animation variants for content
