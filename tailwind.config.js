@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
+      xv:"450",
       xs:"550",
       sm: "640px",
       md: "768px",
@@ -30,7 +31,10 @@ export default {
         "text-gradient":
           "radial-gradient(64.18% 64.18% at 71.16% 35.69%, #B1C9D8 0%, #5A8296 50%, #1E3542 100%)",
           'custom-gradient': 'linear-gradient(135deg,rgb(48, 32, 73), #120D1F)',
+          'gradient-dark': 'linear-gradient(to right, #161325, #241530)',
+          'gradient-input': 'linear-gradient(to right,rgb(4, 13, 41),rgb(69, 45, 105))',
       },
+      
     },
   },
   plugins: [],

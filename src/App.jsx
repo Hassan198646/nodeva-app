@@ -2,15 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Home from './Pages/LandingPage/Home/Home'
-import CalendlyScheduler from './Pages/Calendar';
+import Calendar from './Pages/Calendar';
 function App() {
 
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/calendar" element={<CalendlyScheduler />} />
-
+        <Route path="/contact" element={<Calendar />} />
       </Routes>
     </Router>
   )
