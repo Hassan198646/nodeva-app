@@ -82,7 +82,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mt-12 mx-auto max-w-[80rem] w-full p-6 sm:p-8"
+      className=" mx-auto max-w-[80rem] w-full p-6 sm:p-8"
     >
       <h1 className="text-xl sm:text-2xl md:text-5xl text-center mb-12">
         Frequently Asked Questions

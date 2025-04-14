@@ -1,51 +1,53 @@
-import { useInView } from "react-intersection-observer";
 import { useRive, Layout, Fit, Alignment } from "@rive-app/react-canvas";
 import { useEffect, useState } from "react";
 
 export default function Testimonials() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
   });
 
-  const [shouldLoad, setShouldLoad] = useState(false);
-
+  // Handle window resize/zoom to update dimensions
   useEffect(() => {
-    if (inView) {
-      setShouldLoad(true);
-    }
-  }, [inView]);
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const riveParams = {
     src: "/rotate_animation_compressed.riv",
     autoplay: true,
     stateMachines: ["State Machine 1"],
     layout: new Layout({
-      fit: Fit.Contain,
+      fit: Fit.Fill, // Use Fit.Fill to ensure "all to all" coverage without empty space
       alignment: Alignment.Center,
     }),
   };
 
-  const { RiveComponent } = useRive(shouldLoad ? riveParams : undefined);
+  const { RiveComponent } = useRive(riveParams, {
+    shouldResize: true,
+  });
 
   return (
     <div
-      ref={ref}
-      className="w-full flex items-center justify-center bg-white transition-all duration-500 ease-in-out"
-      style={{
-        padding: "1rem",
-        boxSizing: "border-box",
-        overflow: "hidden",
-      }}
+      className="w-full max-w-[1200px] h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] m-0 p-0 mx-auto overflow-hidden flex justify-center items-center"
+      style={{ position: "relative" }}
     >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "100%",
-          aspectRatio: "1 / 1", // maintains square
-        }}
-      >
-        {shouldLoad && <RiveComponent />}
+      <div className="w-full h-full">
+        <RiveComponent
+          key={`${windowSize.width}-${windowSize.height}`}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // Match Fit.Fill to stretch the animation
+          }}
+        />
       </div>
     </div>
   );

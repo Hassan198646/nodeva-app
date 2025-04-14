@@ -160,9 +160,9 @@ h2 {
 }
 @media (max-width: 1300px) {
   .wrapcontainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }
 }
 @media (max-width: 480px) {

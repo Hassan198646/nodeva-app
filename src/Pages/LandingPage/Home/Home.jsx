@@ -48,7 +48,7 @@ const Home = () => {
       <IndustryExperience />
       <Stages />
       <AboutUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Services />
     </Page>
   );

@@ -39,35 +39,35 @@ export default function Stages() {
     {
       title: "Stage 2",
       items: [
-        { type: "button", text: "UX Audit", gradient: true },
+        { type: "button", text: "UX Design", gradient: true },
         {
           type: "group",
-          items: [{ text: "Market Research" }, { text: "Define MVP Goals" }],
+          items: [{ text: "Wireframes" }, { text: "Prototyping" }],
         },
-        { type: "div", text: "Product/Business Goals" },
+        { type: "div", text: "User Testing" },
       ],
     },
     {
       title: "Stage 3",
       items: [
-        { type: "button", text: "UX Audit", gradient: true },
+        { type: "button", text: "UX Design", gradient: true },
         {
           type: "group",
-          items: [{ text: "Market Research" }, { text: "Define MVP Goals" }],
+          items: [{ text: "Mooboard" }, { text: "Concept Design" }],
         },
-        { type: "div", text: "Product/Business Goals" },
-        { type: "div", text: "Product/Business Goals" },
+        { type: "div", text: "Layouts Design" },
+        { type: "div", text: "Responsive & Adaptive" },
         {
           type: "group",
-          items: [{ text: "Market Research" }, { text: "Define MVP Goals" }],
+          items: [{ text: "UI Style Guide" }, { text: "Design System" }],
         },
       ],
     },
     {
       title: "Stage 4",
       items: [
-        { type: "button", text: "UX Audit", gradient: true },
-        { type: "div", text: "Product/Business Goals" },
+        { type: "button", text: "Support Stage", gradient: true },
+        { type: "div", text: "Control The Design Implementation" },
       ],
     },
   ];
@@ -84,7 +84,7 @@ export default function Stages() {
         Design Process That Covers Your Unique Business
       </h1>
 
-      <div className="flex relative flex-nowrap wrapcontainer">
+      <div className="flex relative gap-2 flex-nowrap wrapcontainer">
         {stages.map((stage, index) => (
           <motion.div
             key={index}
@@ -108,7 +108,7 @@ export default function Stages() {
             >
               {index < stages.length - 1 && (
                 <div
-                  className="absolute hidden xl:block right-0 top-1/2 -translate-y-1/2 w-[2px] h-[130px] bg-[#16161F]"
+                  className="absolute hidden xl:block right-0 top-1/2 -translate-y-1/2 w-[2px] h-[160px] bg-[#16161F]"
                   style={{ transform: "translateY(-50%)" }}
                 ></div>
               )}
@@ -119,7 +119,7 @@ export default function Stages() {
                     <motion.button
                       variants={itemVariants}
                       key={itemIndex}
-                      className={`flex items-center text-[18px] justify-center h-14 md:h-[50px] px-4 py-2 font-bold text-white rounded-[40px] transition-all duration-300 ${
+                      className={`flex items-center text-[15px] justify-center h-14 md:h-[50px]  font-bold text-white rounded-[40px] transition-all duration-300 ${
                         item.gradient
                           ? "bg-gradient-to-r from-[#BB47ED] to-[#C349ED]"
                           : "border border-[#B946DF]"
@@ -133,7 +133,7 @@ export default function Stages() {
                     <motion.button
                       variants={itemVariants}
                       key={itemIndex}
-                      className="flex items-center justify-center h-14 md:h-[50px] px-4 py-2 text-white rounded-[40px] border border-[#B946DF] text-nowrap text-sm md:text-[18px]"
+                      className="flex items-center justify-center h-14 md:h-[50px] px-2 py-2 text-white rounded-[40px] border border-[#B946DF] text-nowrap text-sm md:text-[15px]"
                     >
                       {item.text}
                     </motion.button>
@@ -147,11 +147,11 @@ export default function Stages() {
                     >
                       {item.items.map((groupItem, groupIndex) => (
                         <motion.button
-                          variants={itemVariants}
-                          key={groupIndex}
-                          className="flex items-center justify-center h-14 md:h-[50px] px-3 py-2 text-white rounded-[40px] border border-[#B946DF] text-nowrap text-[13.5px]"
-                        >
-                          {groupItem.text}
+                        variants={itemVariants}
+                        key={groupIndex}
+                        className="flex items-center text-center justify-center h-[50px]  w-1/2 px-3  py-2 text-white rounded-[40px] border border-[#B946DF] text-[10px] sm:text-[13px] md:text-[14px] whitespace-nowrap"
+                      >
+                        {groupItem.text}
                         </motion.button>
                       ))}
                     </motion.div>
